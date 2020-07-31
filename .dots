@@ -35,7 +35,7 @@ function runDots() {
             echo ""
             echo "------------------------------"
             echo "Installing Homebrew along with some common formulae and apps."
-            echo "This might awhile to complete, as some formulae need to be installed from source."
+            echo "This might take a while to complete, as some formulae need to be installed from source."
             echo "------------------------------"
             echo ""
             ./brew.sh
@@ -79,13 +79,13 @@ function runDots() {
             echo ""
             ./datastores.sh
         fi
-        if [ $ARG == "webdev" ] || [ $ARG == "all" ]; then
-            # Run the webdev.sh Script
+        if [ $ARG == "web" ] || [ $ARG == "all" ]; then
+            # Run the web.sh Script
             echo "------------------------------"
             echo "Setting up JavaScript web development environment."
             echo "------------------------------"
             echo ""
-            ./webdev.sh
+            ./web.sh
         fi
         if [ $ARG == "android" ] || [ $ARG == "all" ]; then
             # Run the android.sh Script

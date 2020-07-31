@@ -31,10 +31,9 @@ brew install moreutils
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
 brew install findutils
 # Install GNU `sed`, overwriting the built-in `sed`.
-brew install gnu-sed --with-default-names
+brew install gnu-sed
 # Install Bash 4.
 brew install bash
-brew tap homebrew/versions
 brew install bash-completion2
 # We installed the new shell, now we have to activate it
 echo "Adding the newly installed shell to the list of allowed shells"
@@ -133,12 +132,8 @@ brew link libxml2 --force
 brew link libxslt --force
 
 # Install Heroku
-brew install heroku-toolbelt
+brew install heroku/brew/heroku
 heroku update
-
-# Install Cask
-brew install caskroom/cask/brew-cask
-brew tap caskroom/versions
 
 # Core casks
 brew cask install --appdir="/Applications" alfred
@@ -147,7 +142,7 @@ brew cask install --appdir="~/Applications" java
 brew cask install --appdir="~/Applications" xquartz
 
 # Development tool casks
-brew cask install --appdir="/Applications" sublime-text3
+brew cask install --appdir="/Applications" sublime-text
 brew cask install --appdir="/Applications" atom
 brew cask install --appdir="/Applications" virtualbox
 brew cask install --appdir="/Applications" vagrant
@@ -167,15 +162,12 @@ brew cask install --appdir="/Applications" 1password
 #Remove comment to install LaTeX distribution MacTeX
 #brew cask install --appdir="/Applications" mactex
 
-# Link cask apps to Alfred
-brew cask alfred link
-
 # Install Docker, which requires virtualbox
 brew install docker
 brew install boot2docker
 
 # Install developer friendly quick look plugins; see https://github.com/sindresorhus/quick-look-plugins
-brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook suspicious-package
+brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzip qlimagesize webpquicklook suspicious-package quicklookase qlvideo
 
 # Remove outdated versions from the cellar.
 brew cleanup
